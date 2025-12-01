@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
@@ -15,11 +16,23 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
+
+        <!-- Versions -->
         <spring.version>5.1.11.RELEASE</spring.version>
+        <junit.jupiter.version>5.10.2</junit.jupiter.version>
+        <surefire.plugin.version>3.2.5</surefire.plugin.version>
+        <jacoco.plugin.version>0.8.12</jacoco.plugin.version>
+
+        <!-- SonarCloud (optional: yml me bhi de sakte ho) -->
+        <sonar.projectKey>yadavanand7441_spring_core</sonar.projectKey>
+        <sonar.organization>yadavanand7441</sonar.organization>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+
+        <!-- Jacoco XML path for SonarCloud -->
+        <sonar.coverage.jacoco.xmlReportPaths>target/site/jacoco/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
     </properties>
 
     <dependencies>
-
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-core</artifactId>
@@ -32,34 +45,50 @@
             <version>${spring.version}</version>
         </dependency>
 
-        <!-- JUnit 5 (Latest JUnit testing framework) -->
+        <!-- JUnit 5 -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
-            <version>5.10.0</version>
+            <version>${junit.jupiter.version}</version>
             <scope>test</scope>
         </dependency>
-
     </dependencies>
-
 
     <build>
         <plugins>
+            <!-- Surefire: JUnit 5 tests run karne ke liye -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${surefire.plugin.version}</version>
+                <configuration>
+                    <useModulePath>false</useModulePath>
+                    <!-- Ensure test discovery patterns -->
+                    <includes>
+                        <include>**/*Test.java</include>
+                        <include>**/*Tests.java</include>
+                        <include>**/*TestCase.java</include>
+                    </includes>
+                </configuration>
+            </plugin>
 
-            <!-- JaCoCo plugin (Coverage generation) -->
+            <!-- Jacoco: coverage agent + report -->
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.8.12</version>
+                <version>${jacoco.plugin.version}</version>
                 <executions>
+                    <!-- Attach agent before tests -->
                     <execution>
+                        <id>prepare-agent</id>
                         <goals>
                             <goal>prepare-agent</goal>
                         </goals>
                     </execution>
+                    <!-- Generate report after all tests in verify phase -->
                     <execution>
                         <id>report</id>
-                        <phase>test</phase>
+                        <phase>verify</phase>
                         <goals>
                             <goal>report</goal>
                         </goals>
@@ -67,14 +96,12 @@
                 </executions>
             </plugin>
 
-            <!-- SonarQube plugin -->
+            <!-- Sonar Maven Scanner (optional) -->
             <plugin>
                 <groupId>org.sonarsource.scanner.maven</groupId>
                 <artifactId>sonar-maven-plugin</artifactId>
                 <version>3.11.0.3922</version>
             </plugin>
-
         </plugins>
     </build>
-
 </project>
