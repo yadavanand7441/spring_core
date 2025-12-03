@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--collection concept for all list,set,amp-->
+    <bean class="com.spring.core.dec_25.collection.entity.Employee" name="employee1">
+        <property name="age" value="26"/>
+        <property name="empName" value="Anand Kumar"/>
+        <property name="addresses">
+            <list>
+                <value>Muzaffarpur</value>
+                <value>Pune</value>
+                <value>Kolkata</value>
+            </list>
+        </property>
+        <property name="empIds">
+            <set>
+                <value>1241323</value>
+                <value>6341322</value>
+                <value>3725322</value>
+            </set>
+        </property>
+        <property name="departments">
+            <map>
+                <entry key="Java" value="Backend Developer"/>
+                <entry key="JavaScript" value="FullStack Developer"/>
+            </map>
+        </property>
+    </bean>
+
+    <bean class="com.spring.core.dec_25.collection.entity.Employee" name="employee2">
+        <property name="age" value="27"/>
+        <property name="empName" value="Mohan Kumar"/>
+        <property name="addresses">
+            <list>
+                <value>Goa</value>
+                <value>Delhi</value>
+                <value>Mumbai</value>
+            </list>
+        </property>
+        <property name="empIds">
+            <set>
+                <value>6342322</value>
+                <value>4836533</value>
+                <value>9362421</value>
+            </set>
+        </property>
+        <property name="departments">
+            <map>
+                <entry key="C++" value="Backend Developer"/>
+                <entry key="HTML,CSS" value="FullStack Developer"/>
+            </map>
+        </property>
+    </bean>
+</beans>

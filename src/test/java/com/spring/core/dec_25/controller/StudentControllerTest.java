@@ -1,6 +1,6 @@
 package com.spring.core.dec_25.controller;
 
-import com.spring.core.dec_25.entity.Student;
+import com.spring.core.dec_25.basic.entity.Student;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -13,7 +13,7 @@ class StudentControllerTest {
     void testStudentBeansLoadedFromXml() {
         // Load Spring context from XML
         ApplicationContext context =
-                new ClassPathXmlApplicationContext("com/spring/core/dec_25/configuration/studentconfiguration.xml");
+                new ClassPathXmlApplicationContext("com/spring/core/dec_25/basic/configuration/studentconfiguration.xml");
 
         // Verify student1 bean
         Student student1 = context.getBean("student1", Student.class);
