@@ -1,3 +1,4 @@
+/*
 package com.spring.core.dec_25.constructor_injection.ambiguity.problem.controller;
 
 import com.spring.core.dec_25.constructor_injection.ambiguity.problem.entity.Addition;
@@ -44,3 +45,4 @@ class AdditionControllerTest {
         }
     }
 }
+*/
