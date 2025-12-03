@@ -1,4 +1,4 @@
-package com.spring.core.dec_25.entity;
+package com.spring.core.dec_25.basic.entity;
 
 public class Student {
 

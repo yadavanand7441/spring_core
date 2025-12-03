@@ -5,13 +5,13 @@
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean class="com.spring.core.dec_25.entity.Student" id="student1">
+    <bean class="com.spring.core.dec_25.basic.entity.Student" id="student1">
         <property name="studentId" value="12341"/>
         <property name="studentName" value="Sonam Kapoor"/>
         <property name="studentAddress" value="Mumbai"/>
     </bean>
 
-    <bean class="com.spring.core.dec_25.entity.Student" id="student2">
+    <bean class="com.spring.core.dec_25.basic.entity.Student" id="student2">
         <property name="studentId" value="452432"/>
         <property name="studentName" value="Mohan Rohan"/>
         <property name="studentAddress" value="Patna"/>
