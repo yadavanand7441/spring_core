@@ -12,9 +12,10 @@ public class Addition {
         this.b = b;
         System.out.println("Constructor: int,  int");
     }
+
     public Addition(double a, double b) {
-        this.a = (int)a;
-        this.b = (int)b;
+        this.a = (int) a;
+        this.b = (int) b;
         System.out.println("Constructor: double,  double");
     }
 
@@ -23,8 +24,8 @@ public class Addition {
         this.b = Integer.parseInt(b);
         System.out.println("Constructor: String ,  String");
     }
-    public void doSum()
-    {
-        System.out.println("Sum is: "+ (this.a +this.b));
+
+    public void doSum() {
+        System.out.println("Sum is: " + (this.a + this.b));
     }
 }

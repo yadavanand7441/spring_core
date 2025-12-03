@@ -9,9 +9,9 @@ public class StudentController {
 
         ApplicationContext studentContext = new ClassPathXmlApplicationContext("com/spring/core/dec_25/basic/configuration/studentconfiguration.xml");
         Student studentContextBean1 = studentContext.getBean("student1", Student.class);
-        System.out.println("Student1 data is: "+ studentContextBean1);
+        System.out.println("Student1 data is: " + studentContextBean1);
 
         Student student2 = studentContext.getBean("student2", Student.class);
-        System.out.println("Student2 data is: "+ student2);
+        System.out.println("Student2 data is: " + student2);
     }
 }
