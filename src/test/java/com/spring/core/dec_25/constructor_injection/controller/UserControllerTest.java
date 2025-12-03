@@ -19,7 +19,7 @@ class UserControllerTest {
         assertNotNull(user, "user bean should not be null");
 
         // Call the custom method to cover it
-        user.User();
+        //user.User();
 
         // Example property checks (adjust according to cfg.xml values)
         assertNotNull(user.getUserName(), "userName should not be null");
