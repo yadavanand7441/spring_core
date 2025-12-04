@@ -42,7 +42,6 @@ class SamosaTest {
     @Test
     void testToString() {
         samosa.setPrice(100.0);
-        String expected = "Samosa(price=100.0)";
         assertTrue(samosa.toString().contains("price=100.0"));
     }
 }
