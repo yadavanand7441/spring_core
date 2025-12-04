@@ -11,4 +11,10 @@
         <constructor-arg name="b" value="48"/>
     </bean>
 
+    <!--constructor-inject-->
+    <bean class="com.spring.core.dec_25.constructor_injection.ambiguity.problem.entity.Addition" name="addition1">
+        <constructor-arg name="a" value="12" type="int"/>
+        <constructor-arg name="b" value="48" type="int"/>
+    </bean>
+
 </beans>

@@ -1,6 +1,5 @@
 package com.spring.core.dec_25.constructor_injection.controller;
 
-import com.spring.core.dec_25.basic.controller.StudentController;
 import com.spring.core.dec_25.constructor_injection.entity.User;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

@@ -1,10 +1,12 @@
 package com.spring.core.dec_25.constructor_injection.ambiguity.problem.entity;
 
+import lombok.NoArgsConstructor;
 import lombok.ToString;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 @ToString
+@NoArgsConstructor
 public class Addition {
 
     private static final Logger logger = LoggerFactory.getLogger(Addition.class);
@@ -33,4 +35,5 @@ public class Addition {
     public void doSum() {
         logger.info("Sum is: {}", (this.a + this.b));
     }
+
 }
