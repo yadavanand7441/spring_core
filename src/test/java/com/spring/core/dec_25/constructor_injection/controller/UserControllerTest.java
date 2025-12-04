@@ -1,13 +1,15 @@
 package com.spring.core.dec_25.constructor_injection.controller;
 
+import com.spring.core.dec_25.basic.controller.StudentController;
 import com.spring.core.dec_25.constructor_injection.entity.User;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class UserControllerTest {
+class UserControllerTest {
 
     @Test
     void testUserBeanLoadingFromSpringContext() {
@@ -22,5 +24,11 @@ public class UserControllerTest {
         assertNotNull(user, "User bean must not be null");
         assertNotNull(user.getUserName(), "User name should not be null");
         assertNotNull(user.getUserAddress(), "User address should not be null");
+    }
+
+    @Test
+    void testMainMethodRunsWithoutException() {
+        String[] args = {};
+        Assertions.assertDoesNotThrow(() -> UserController.main(args));
     }
 }
