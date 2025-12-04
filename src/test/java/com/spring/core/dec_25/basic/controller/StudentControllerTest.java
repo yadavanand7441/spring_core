@@ -13,8 +13,7 @@ class StudentControllerTest {
     @Test
     void testStudentBeansLoadingFromSpringContext() {
 
-        ApplicationContext context = new ClassPathXmlApplicationContext(
-                "com/spring/core/dec_25/basic/configuration/studentconfiguration.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("com/spring/core/dec_25/basic/configuration/studentconfiguration.xml");
 
         // fetch student1 bean
         Student student1 = context.getBean("student1", Student.class);
@@ -30,6 +29,7 @@ class StudentControllerTest {
         assertNotEquals(student1.getStudentName(), student2.getStudentName(), "Both students should not have same name");
 
     }
+
     @Test
     void testMainMethodRunsWithoutException() {
         String[] args = {};
