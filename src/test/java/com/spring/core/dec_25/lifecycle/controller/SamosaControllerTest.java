@@ -35,6 +35,6 @@ class SamosaControllerTest {
     @Test
     void testMainMethodRunsWithoutException() {
         String[] args = {};
-        Assertions.assertDoesNotThrow(() -> SamosaController.main(args));
+        Assertions.assertDoesNotThrow(() -> LifeCycleController.main(args));
     }
 }
