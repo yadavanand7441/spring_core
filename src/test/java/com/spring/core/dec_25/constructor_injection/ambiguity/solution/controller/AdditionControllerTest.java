@@ -22,10 +22,6 @@ class AdditionControllerTest {
         // Assertions for null check and dependency correct loading
         assertNotNull(addition, "Addition bean should not be null");
 
-        // Uncomment if Addition contains fields like int a, int b (add matching expected values)
-        // assertEquals(10, addition.getA());
-        // assertEquals(20, addition.getB());
-
         // Call method to increase method coverage
         addition.doSum();
     }

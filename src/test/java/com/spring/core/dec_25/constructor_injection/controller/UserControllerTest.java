@@ -22,8 +22,5 @@ public class UserControllerTest {
         assertNotNull(user, "User bean must not be null");
         assertNotNull(user.getUserName(), "User name should not be null");
         assertNotNull(user.getUserAddress(), "User address should not be null");
-
-        // Example expected values assertion (change according to cfg.xml data)
-        // assertEquals("Anand", user.getUserName(), "User name should match expected value");
     }
 }

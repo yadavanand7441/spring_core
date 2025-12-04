@@ -16,7 +16,7 @@ public class UserController {
                 "com/spring/core/dec_25/constructor_injection/config/cfg.xml");
 
         User user = userContext.getBean("user", User.class);
-        //user.User();
+
 
         logger.info("User object: {}", user);
     }

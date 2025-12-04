@@ -22,12 +22,6 @@ class AdditionControllerTest {
         // Basic validation assertions for Sonar coverage
         assertNotNull(addition, "Addition bean should not be null");
 
-        // If the Addition class contains fields like a, b, c - assert them
-        // (Uncomment and update values based on cfg.xml)
-        // assertEquals(10, addition.getA());
-        // assertEquals(20, addition.getB());
-
-        // Call method to cover function logic
         addition.doSum();  // even without return, method coverage milegi
     }
 }
