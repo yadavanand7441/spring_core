@@ -1,6 +1,7 @@
 package com.spring.core.dec_25.basic.entity;
 
 import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class StudentTest {

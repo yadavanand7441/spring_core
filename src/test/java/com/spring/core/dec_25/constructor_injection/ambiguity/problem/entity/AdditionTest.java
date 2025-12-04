@@ -1,6 +1,7 @@
 package com.spring.core.dec_25.constructor_injection.ambiguity.problem.entity;
 
 import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class AdditionTest {
