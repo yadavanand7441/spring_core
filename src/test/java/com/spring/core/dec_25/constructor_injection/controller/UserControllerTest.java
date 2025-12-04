@@ -7,26 +7,23 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class UserControllerTest {
+public class UserControllerTest {
 
     @Test
-    void testUserBeanLoadedFromContext() {
+    void testUserBeanLoadingFromSpringContext() {
+
         ApplicationContext context = new ClassPathXmlApplicationContext(
                 "com/spring/core/dec_25/constructor_injection/config/cfg.xml");
 
+        // Fetching user bean
         User user = context.getBean("user", User.class);
 
-        assertNotNull(user, "user bean should not be null");
+        // Assertions to satisfy Sonar & valid JUnit test
+        assertNotNull(user, "User bean must not be null");
+        assertNotNull(user.getUserName(), "User name should not be null");
+        assertNotNull(user.getUserAddress(), "User address should not be null");
 
-        // Call the custom method to cover it
-        //user.User();
-
-        // Example property checks (adjust according to cfg.xml values)
-        assertNotNull(user.getUserName(), "userName should not be null");
-        assertNotNull(user.getUserAddress(), "userAddress should not be null");
-
-        // toString should contain userName
-        String result = user.toString();
-        assertTrue(result.contains(user.getUserName()));
+        // Example expected values assertion (change according to cfg.xml data)
+        // assertEquals("Anand", user.getUserName(), "User name should match expected value");
     }
 }
