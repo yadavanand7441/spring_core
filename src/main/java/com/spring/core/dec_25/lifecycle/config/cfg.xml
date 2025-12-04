@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--spring-lifecycle example-->
+    <!--we can change the init and destroy method name. it will be no problem-->
+    <bean class="com.spring.core.dec_25.lifecycle.entity.Samosa" name="samosa" init-method="init" destroy-method="destroy">
+        <property name="price" value="10.4"/>
+    </bean>
+
+</beans>
