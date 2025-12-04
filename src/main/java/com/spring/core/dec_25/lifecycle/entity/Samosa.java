@@ -24,6 +24,6 @@ public class Samosa {
     }
     public void destroy()
     {
-        System.out.println("Inside destroy method:");
+        logger.info("Inside destroy method:");
     }
 }

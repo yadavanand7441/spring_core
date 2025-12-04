@@ -9,7 +9,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class LifeCycleController {
 
-    private static final Logger logger = LoggerFactory.getLogger(Samosa.class);
+    private static final Logger logger = LoggerFactory.getLogger(LifeCycleController.class);
     public static void main(String[] args) {
 
         AbstractApplicationContext samosaContext = new ClassPathXmlApplicationContext("com/spring/core/dec_25/lifecycle/config/cfg.xml");
