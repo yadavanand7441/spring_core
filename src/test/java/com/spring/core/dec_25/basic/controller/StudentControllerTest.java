@@ -1,13 +1,14 @@
 package com.spring.core.dec_25.basic.controller;
 
 import com.spring.core.dec_25.basic.entity.Student;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class StudentControllerTest {
+class StudentControllerTest {
 
     @Test
     void testStudentBeansLoadingFromSpringContext() {
@@ -28,5 +29,10 @@ public class StudentControllerTest {
         // Example assertion to validate field content (change values according to config)
         assertNotEquals(student1.getStudentName(), student2.getStudentName(), "Both students should not have same name");
 
+    }
+    @Test
+    void testMainMethodRunsWithoutException() {
+        String[] args = {};
+        Assertions.assertDoesNotThrow(() -> StudentController.main(args));
     }
 }
