@@ -1,6 +1,7 @@
 package com.spring.core.dec_25.constructor_injection.ambiguity.problem.controller;
 
 import com.spring.core.dec_25.constructor_injection.ambiguity.problem.entity.Addition;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -23,5 +24,10 @@ class AdditionControllerTest {
         assertNotNull(addition, "Addition bean should not be null");
 
         addition.doSum();  // even without return, method coverage milegi
+    }
+    @Test
+    void testMainMethodRunsWithoutException() {
+        String[] args = {};
+        Assertions.assertDoesNotThrow(() -> AdditionController.main(args));
     }
 }
