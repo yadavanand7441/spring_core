@@ -11,5 +11,8 @@ public class AdditionController {
         Addition addition = additionContext.getBean("addition", Addition.class);
         addition.doSum();
 
+        Addition addition1 = additionContext.getBean("addition1", Addition.class);
+        addition1.doSum();
+
     }
 }
