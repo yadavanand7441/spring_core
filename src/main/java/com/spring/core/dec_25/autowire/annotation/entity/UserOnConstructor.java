@@ -1,5 +1,6 @@
 package com.spring.core.dec_25.autowire.annotation.entity;
 
+import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 import org.slf4j.Logger;
@@ -8,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 @ToString
 @Setter
+@Getter
 public class UserOnConstructor {
     private int uId;
     private String uName;

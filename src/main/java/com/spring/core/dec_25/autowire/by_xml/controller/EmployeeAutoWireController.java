@@ -17,13 +17,13 @@ public class EmployeeAutoWireController {
         /**
         * byName auto-wire
          */
-       /* Employee employeeByName = employeeContext.getBean("employeeByName", Employee.class);
+       /** Employee employeeByName = employeeContext.getBean("employeeByName", Employee.class);
         logger.info("employee data byName auto-wire: {}",employeeByName);*/
 
         /**
          * byType auto-wire
          */
-        /*Employee employeeByType = employeeContext.getBean("employeeByType", Employee.class);
+        /**Employee employeeByType = employeeContext.getBean("employeeByType", Employee.class);
         logger.info("employee data byName auto-wire: {}",employeeByType);*/
 
         /**
