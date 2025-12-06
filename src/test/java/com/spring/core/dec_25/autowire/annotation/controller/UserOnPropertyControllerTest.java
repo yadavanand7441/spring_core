@@ -4,7 +4,7 @@ package com.spring.core.dec_25.autowire.annotation.controller;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class UserOnPropertyControllerTest {
+class UserOnPropertyControllerTest {
 
     @Test
     void testMainMethodRunsWithoutException() {

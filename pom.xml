@@ -30,6 +30,11 @@
 
         <!-- Jacoco XML path for SonarCloud -->
         <sonar.coverage.jacoco.xmlReportPaths>target/site/jacoco/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
+
+        <!-- Only include Java files for Sonar -->
+        <sonar.inclusions>**/*.java</sonar.inclusions>
+        <sonar.exclusions>**/*.xml,**/*.yml,**/*.properties,**/*.html,**/*.jsp,**/*.js,**/*.css</sonar.exclusions>
+        <sonar.coverage.exclusions>**/*.xml,**/*.yml,**/*.properties,**/config/**</sonar.coverage.exclusions>
     </properties>
 
     <dependencies>
