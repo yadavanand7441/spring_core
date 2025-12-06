@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:annotation-config/>
+
+    <bean class="com.spring.core.dec_25.autowire.annotation.entity.Product" name="product">
+        <property name="productId" value="456132"/>
+        <property name="productName" value="Tony"/>
+        <property name="productPrice" value="4624"/>
+    </bean>
+
+    <!--example for auto-wire using annotation on property-->
+    <bean class="com.spring.core.dec_25.autowire.annotation.entity.UserOnProperty" name="annotationOnProperty">
+        <property name="userId" value="6132"/>
+        <property name="userName" value="Tony"/>
+    </bean>
+
+    <!--example for auto-wire using annotation on setter-method concept-->
+    <bean class="com.spring.core.dec_25.autowire.annotation.entity.UserOnSetterMethod" name="annotationOnSetterMethod">
+        <property name="id" value="6341"/>
+        <property name="name" value="Moni"/>
+    </bean>
+
+    <!--example for auto-wire using annotation on constructor-concept-->
+    <bean class="com.spring.core.dec_25.autowire.annotation.entity.UserOnConstructor" name="annotationOnConstructor">
+        <constructor-arg name="uId" value="5343"/>
+        <constructor-arg name="uName" value="Roni"/>
+    </bean>
+
+
+</beans>
