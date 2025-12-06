@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+    <!--spring auto-wire concept using byName-->
+    <!--we have to use same name as declared in the employee dependent class variable name-->
+
+    <!--<bean class="com.spring.core.dec_25.autowire.by_xml.enity.EmployeeAddress" name="employeeAddress">
+        <property name="street" value="Simtoka,Bhalura"/>
+        <property name="city" value="Aurai"/>
+        <property name="zipCode" value="843312"/>
+        <property name="district" value="Muzaffarpur"/>
+        <property name="state" value="Bihar"/>
+        <property name="country" value="India"/>
+    </bean>-->
+
+
+    <bean class="com.spring.core.dec_25.autowire.by_xml.enity.EmployeeAddress" name="employeeAddress">
+        <property name="street" value="Simtoka,Bhalura"/>
+        <property name="city" value="Aurai"/>
+        <property name="zipCode" value="843312"/>
+        <property name="district" value="Muzaffarpur"/>
+        <property name="state" value="Bihar"/>
+        <property name="country" value="India"/>
+    </bean>
+
+    <!--spring auto-wire concept using byName-->
+    <!--<bean class="com.spring.core.dec_25.autowire.by_xml.enity.Employee" name="employeeByName" autowire="byName">
+        <property name="employeeId" value="125321"/>
+        <property name="employeeName" value="Anand Kumar"/>
+    </bean>-->
+
+    <!--spring auto-wire concept using byType-->
+    <!--<bean class="com.spring.core.dec_25.autowire.by_xml.enity.Employee" name="employeeByType" autowire="byType">
+        <property name="employeeId" value="125321"/>
+        <property name="employeeName" value="Anand Kumar"/>
+    </bean>-->
+
+    <!--spring auto-wire concept using byConstructor-->
+    <bean class="com.spring.core.dec_25.autowire.by_xml.enity.Employee" name="employeeByConstructor" autowire="constructor">
+        <constructor-arg name="employeeId" value="125321"/>
+        <constructor-arg name="employeeName" value="Anand Kumar"/>
+    </bean>
+
+
+
+
+
+</beans>
