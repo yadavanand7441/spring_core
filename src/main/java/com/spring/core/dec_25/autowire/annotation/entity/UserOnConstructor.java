@@ -15,7 +15,7 @@ public class UserOnConstructor {
     private String uName;
     private Product product;
 
-    private static Logger logger = LoggerFactory.getLogger(UserOnSetterMethod.class);
+    private static Logger logger = LoggerFactory.getLogger(UserOnConstructor.class);
 
     @Autowired
     public UserOnConstructor(int uId, String uName, Product product) {
