@@ -1,5 +1,6 @@
 package com.spring.core.dec_25.autowire.annotation.controller;
 
+import com.spring.core.dec_25.autowire.annotation.entity.QualifierAnnotationUse;
 import com.spring.core.dec_25.autowire.annotation.entity.UserOnConstructor;
 import com.spring.core.dec_25.autowire.annotation.entity.UserOnProperty;
 import com.spring.core.dec_25.autowire.annotation.entity.UserOnSetterMethod;
@@ -33,6 +34,12 @@ public class UserOnPropertyController {
          * */
         UserOnConstructor userOnConstructor = context.getBean("annotationOnConstructor", UserOnConstructor.class);
         logger.info("user record {}",userOnConstructor);
+
+        /**
+         * example for auto-wire using annotation on constructor-concept
+         * */
+        QualifierAnnotationUse qualifierAnnotationUse = context.getBean("qualifierAnnotationUse", QualifierAnnotationUse.class);
+        logger.info("user record {}",qualifierAnnotationUse);
 
     }
 }
