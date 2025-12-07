@@ -17,6 +17,13 @@
         <property name="productPrice" value="4624"/>
     </bean>
 
+    <!--example for auto-wire using annotation to test with @Qualifier annotation-->
+    <bean class="com.spring.core.dec_25.autowire.annotation.entity.Product" name="product1">
+        <property name="productId" value="456132"/>
+        <property name="productName" value="Tony"/>
+        <property name="productPrice" value="4624"/>
+    </bean>
+
     <!--example for auto-wire using annotation on property-->
     <bean class="com.spring.core.dec_25.autowire.annotation.entity.UserOnProperty" name="annotationOnProperty">
         <property name="userId" value="6132"/>
@@ -33,6 +40,13 @@
     <bean class="com.spring.core.dec_25.autowire.annotation.entity.UserOnConstructor" name="annotationOnConstructor">
         <constructor-arg name="uId" value="5343"/>
         <constructor-arg name="uName" value="Roni"/>
+    </bean>
+
+
+    <!--example for auto-wire using annotation on constructor-concept-->
+    <bean class="com.spring.core.dec_25.autowire.annotation.entity.QualifierAnnotationUse" name="qualifierAnnotationUse">
+        <constructor-arg name="personId" value="6334"/>
+        <constructor-arg name="personName" value="Rahul"/>
     </bean>
 
 
