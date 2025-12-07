@@ -8,7 +8,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class BeanScopeByAnnotationSingletonController {
 
-    private static Logger logger = LoggerFactory.getLogger(PersonController.class);
+    private static Logger logger = LoggerFactory.getLogger(BeanScopeByAnnotationSingletonController.class);
 
     public static void main(String[] args) {
 

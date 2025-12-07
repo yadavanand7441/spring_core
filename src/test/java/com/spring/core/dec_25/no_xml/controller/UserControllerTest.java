@@ -1,13 +1,13 @@
-package com.spring.core.dec_25.stereotype_annotation.controller;
+package com.spring.core.dec_25.no_xml.controller;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-class PersonControllerTest {
+public class UserControllerTest {
 
     @Test
     void testMainMethodRunsWithoutException() {
         String[] args = {};
-        Assertions.assertDoesNotThrow(() -> PersonController.main(args));
+        Assertions.assertDoesNotThrow(() -> UserController.main(args));
     }
 }
